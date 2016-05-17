@@ -2,7 +2,7 @@
 
 # Device Name Fix for ASUS Zenfone 5/6
 # Author: Douglas Gadêlha <douglas@gadeco.com.br>
-# Version: 20160504
+# Version: 20160517
 #
 # The MIT License (MIT)
 #
@@ -60,13 +60,27 @@ if [ -n "$PROJECT_ID" ]; then
 			log -p i -t dnfix "Build Properties already updated"
 		else
 			log -p i -t dnfix "Build Properties are NOT updated, updating..."
+
 			log -p i -t dnfix "Re-mounting System as Read-Write..."
 			mount -o remount,rw /system
+
 			log -p i -t dnfix "Updating build.prop..."
 			sed -i 's/T00F/T00G/g' /system/build.prop
 			echo "\n# dnfix\ndgadelha.dnfix.updated=true\n" >> /system/build.prop
+
+			log -p i -t dnfix "Updating Sensors Library..."
+			rm /system/lib/hw/sensors.redhookbay.so
+			ln -s /system/lib/hw/a600cg.sensors.redhookbay.so /system/lib/hw/sensors.redhookbay.so
+
+			log -p i -t dnfix "Re-inforcing permissions of modified files..."
+			chmod 0644 /system/lib/hw/a500cg.sensors.redhookbay.so
+			chmod 0644 /system/lib/hw/a600cg.sensors.redhookbay.so
+			chmod 0644 /system/lib/hw/sensors.redhookbay.so
+			chmod 0644 /system/build.prop
+
 			log -p i -t dnfix "Re-mounting System as Read-Only..."
 			mount -o remount,ro /system
+
 			log -p i -t dnfix "Build Properties updated. You may need to reboot to apply the changes"
 		fi
 	else

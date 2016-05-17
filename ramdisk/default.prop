@@ -15,6 +15,8 @@ dalvik.vm.dex2oat-Xms=64m
 dalvik.vm.dex2oat-Xmx=512m
 ro.build.selinux=0
 gsm.net.interface=rmnet0
+ro.sys.powerctl.no.shutdown=1
+init.shutdown_to_charging=1
 #
 # BOOTIMAGE_BUILD_PROPERTIES
 #
