@@ -5,7 +5,7 @@
 "boot/ramdisk/fstab.redhookbay",32768,1000,1000,644
 "boot/ramdisk/init",32768,1000,1000,775
 "boot/ramdisk/init.avc.rc",32768,1000,1000,644
-"boot/ramdisk/init.a500cg.usb",32768,1000,1000,644
+"boot/ramdisk/init.a500cg.usb.rc",32768,1000,1000,644
 "boot/ramdisk/init.bt.rc",32768,1000,1000,644
 "boot/ramdisk/init.bt.vendor.rc",32768,1000,1000,644
 "boot/ramdisk/init.cm.rc",32768,1000,1000,644
