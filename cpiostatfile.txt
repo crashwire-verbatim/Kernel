@@ -20,6 +20,7 @@
 "boot/ramdisk/init.modem.rc",32768,1000,1000,644
 "boot/ramdisk/init.rc",32768,1000,1000,644
 "boot/ramdisk/init.redhookbay.rc",32768,1000,1000,644
+"boot/ramdisk/init.redhookbay.ril.sh",32768,1000,1000,755
 "boot/ramdisk/init.superuser.rc",32768,1000,1000,644
 "boot/ramdisk/init.trace.rc",32768,1000,1000,644
 "boot/ramdisk/init.usb.configfs.rc",32768,1000,1000,644

@@ -606,6 +606,12 @@ service_redefine dpst /system/bin/dpstmgr
 #     disabled
 #     seclabel u:r:pclinkd:s0
 
+service rild2-wrapper /system/bin/sh /init.redhookbay.ril.sh
+    class late_start
+    user root
+    group root
+    oneshot
+
 # From init.rc in stock, these redefine service definitions
 service_redefine media /system/bin/mediaserver
     class main
