@@ -6,18 +6,10 @@ import init.wireless.rc
 import init.modem.rc
 import init.config_init.rc
 import init.dgadelha.rc
-import init.wifi.rc
 import init.usb.rc
-import init.platform.usb.rc
 import init.bt.rc
 import init.compass.rc
 import init.gps.rc
-
-on load_all_props_action
-    load_all_props
-
-on load_persist_props_action
-    trigger load_all_props_action
 
 on early-init
     # Set boot_min_cap for boot to android
@@ -57,8 +49,6 @@ on init
     mkdir /config
 
 on boot
-    export LD_PRELOAD "/system/lib/libmmcompat.so libsigchain.so"
-
     # 4.3 needs this
     chmod 0644 /proc/cmdline
 
@@ -617,7 +607,6 @@ service_redefine dpst /system/bin/dpstmgr
 #     seclabel u:r:pclinkd:s0
 
 # From init.rc in stock, these redefine service definitions
-
 service_redefine media /system/bin/mediaserver
     class main
     user media

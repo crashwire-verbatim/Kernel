@@ -7,7 +7,7 @@ on post-fs
     chmod 0660 /sys/devices/platform/intel_mid_gps/intel_mid_gps/enable
     chown gps gps /sys/devices/platform/intel_mid_gps/intel_mid_gps/enable   
 
-service gpsd /system/bin/gpsd -c /system/etc/gps.xml
+service gpsd /system/bin/gpsd -c /system/etc/gpsconfig.xml
     class main
     user gps
     group system inet radio sdcard_rw net_admin

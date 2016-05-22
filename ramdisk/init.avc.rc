@@ -24,23 +24,14 @@ on init
 
 on post-fs
     # Defer loading modules that may require firmware till fs is ready
-
-    # insmod /lib/modules/ov8830.ko
-    # insmod /lib/modules/mt9m114.ko
-    # insmod /lib/modules/ar0543_raw.ko
-    # insmod /lib/modules/hm2056_raw.ko
-    # insmod /lib/modules/lm3554.ko
     insmod /lib/modules/imx111.ko
     insmod /lib/modules/imx219.ko
     insmod /lib/modules/t4k35.ko
     insmod /lib/modules/t4k35_180.ko
-
     insmod /lib/modules/t4k37.ko
     insmod /lib/modules/mn34130.ko
-
     insmod /lib/modules/hm2056.ko
     insmod /lib/modules/gc2155.ko
-
     insmod /lib/modules/rt8515.ko
     insmod /lib/modules/atomisp-css2300.ko dypool_enable=y
     # Enable full ISP timeout dumps

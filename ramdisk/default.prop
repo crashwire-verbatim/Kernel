@@ -1,8 +1,6 @@
 #
 # ADDITIONAL_DEFAULT_PROPERTIES
 #
-ro.build.asus.sku=WW
-ro.dalvik.vm.native.bridge=libhoudini.so
 ro.adb.secure=1
 ro.opengles.version=131072
 ro.secure=1
@@ -13,15 +11,14 @@ dalvik.vm.image-dex2oat-Xms=64m
 dalvik.vm.image-dex2oat-Xmx=64m
 dalvik.vm.dex2oat-Xms=64m
 dalvik.vm.dex2oat-Xmx=512m
+ro.dalvik.vm.native.bridge=libhoudini.so
+debug.atrace.tags.enableflags=0
 ro.build.selinux=0
 gsm.net.interface=rmnet0
-ro.sys.powerctl.no.shutdown=1
-init.shutdown_to_charging=1
 #
 # BOOTIMAGE_BUILD_PROPERTIES
 #
-ro.bootimage.build.version=20160504
-ro.bootimage.build.date=Ter Abr 19 03:48:33 BRT 2016
-ro.bootimage.build.date.utc=1461048513
-ro.bootimage.build.fingerprint=ASUS/cm_T00F/T00F:6.0.1/MHC19Q/0eae9d452f:user/test-keys
+ro.bootimage.build.date=Fri 20 May 05:58:48 GMT 2016
+ro.bootimage.build.date.utc=1463723928
+ro.bootimage.build.fingerprint=ASUS/cm_T00F/T00F:6.0.1/MHC19Q/f4c9a1b0e8:user/test-keys
 persist.sys.usb.config=none

@@ -7,7 +7,6 @@
 "boot/ramdisk/init.avc.rc",32768,1000,1000,644
 "boot/ramdisk/init.a500cg.usb.rc",32768,1000,1000,644
 "boot/ramdisk/init.bt.rc",32768,1000,1000,644
-"boot/ramdisk/init.bt.vendor.rc",32768,1000,1000,644
 "boot/ramdisk/init.cm.rc",32768,1000,1000,644
 "boot/ramdisk/init.common.rc",32768,1000,1000,644
 "boot/ramdisk/init.compass.rc",32768,1000,1000,644
@@ -19,17 +18,13 @@
 "boot/ramdisk/init.firmware.rc",32768,1000,1000,644
 "boot/ramdisk/init.gps.rc",32768,1000,1000,644
 "boot/ramdisk/init.modem.rc",32768,1000,1000,644
-"boot/ramdisk/init.platform.usb.rc",32768,1000,1000,644
 "boot/ramdisk/init.rc",32768,1000,1000,644
-"boot/ramdisk/init.recovery.redhookbay.rc",32768,1000,1000,644
 "boot/ramdisk/init.redhookbay.rc",32768,1000,1000,644
 "boot/ramdisk/init.superuser.rc",32768,1000,1000,644
 "boot/ramdisk/init.trace.rc",32768,1000,1000,644
 "boot/ramdisk/init.usb.configfs.rc",32768,1000,1000,644
 "boot/ramdisk/init.usb.rc",32768,1000,1000,644
 "boot/ramdisk/init.watchdog.rc",32768,1000,1000,644
-"boot/ramdisk/init.wifi.rc",32768,1000,1000,644
-"boot/ramdisk/init.wifi.vendor.rc",32768,1000,1000,644
 "boot/ramdisk/init.wireless.rc",32768,1000,1000,644
 "boot/ramdisk/init.zram.rc",32768,1000,1000,644
 "boot/ramdisk/init.zygote32.rc",32768,1000,1000,644

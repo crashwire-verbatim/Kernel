@@ -1,5 +1,3 @@
-import init.bt.vendor.rc
-
 # Point on the right bt_vendor.conf at runtime
 on property:ro.product.name=*
     setprop ro.bt.conf_file /system/etc/bluetooth/bt_${ro.product.name}.conf
@@ -22,3 +20,25 @@ service bd_prov /system/bin/bd_prov
     disabled
     oneshot
     seclabel u:r:bluetooth:s0
+
+#######################################################
+#     BLUETOOTH CONFIGURATION - BROADCOM SPECIFIC     #
+#######################################################
+
+on init
+    insmod /lib/modules/bcm_bt_lpm.ko
+
+on post-fs
+    mkdir /config/bt
+    chown system bluetooth /config/bt
+    chmod 0770 /config/bt
+    setprop ro.bt.bdaddr_path "/config/bt/bd_addr.conf"
+    start bd_prov
+
+on early-boot
+    chmod 0644 /config/bt/bd_addr.conf
+
+service rfkill_bt /system/bin/sh /sbin/rfkill_bt.sh
+    class core
+    user root
+    oneshot
