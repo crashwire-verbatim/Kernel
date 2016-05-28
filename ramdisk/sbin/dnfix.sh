@@ -2,7 +2,7 @@
 
 # Device Name Fix for ASUS Zenfone 5/6
 # Author: Douglas Gadêlha <douglas@gadeco.com.br>
-# Version: 20160517
+# Version: 20160528+1
 #
 # The MIT License (MIT)
 #
@@ -29,7 +29,7 @@
 # NOTE: This feature is ENABLED by DEFAULT.
 
 if [ -f "/data/dgadelha/dnfix" ]; then
-	ENABLED=`cat "/data/dgadelha/dnfix"`
+	ENABLED=$(cat "/data/dgadelha/dnfix")
 
 	if [ "$ENABLED" == "0" ]; then
 		log -p i -t dnfix "Device Name Fix is DISABLED"
@@ -54,7 +54,7 @@ if [ -n "$PROJECT_ID" ]; then
 		stop akmd
 		start akmd_a600cg
 
-		UPDATED=$(getprop dgadelha.dnfix.updated))
+		UPDATED=$(getprop dgadelha.dnfix.updated.201605281)
 
 		if [ "$UPDATED" == "true" ]; then
 			log -p i -t dnfix "Build Properties already updated"
@@ -66,16 +66,28 @@ if [ -n "$PROJECT_ID" ]; then
 
 			log -p i -t dnfix "Updating build.prop..."
 			sed -i 's/T00F/T00G/g' /system/build.prop
-			echo "\n# dnfix\ndgadelha.dnfix.updated=true\n" >> /system/build.prop
+			printf "\n# dnfix - 20160528+1\ndgadelha.dnfix.updated.201605281=true\n" >> /system/build.prop
 
 			log -p i -t dnfix "Updating Sensors Library..."
 			rm /system/lib/hw/sensors.redhookbay.so
 			ln -s /system/lib/hw/a600cg.sensors.redhookbay.so /system/lib/hw/sensors.redhookbay.so
 
+			log -p i -t dnfix "Updating Camera DIT Libraries..."
+			rm /system/lib/libxditk_DIT_Manager.so
+			ln -s /system/lib/ditlib_a600cg/libxditk_DIT_Manager.so /system/lib/libxditk_DIT_Manager.so
+			rm /system/lib/libxditk_DIT_CloverTrailPlus.so
+			ln -s /system/lib/ditlib_a600cg/libxditk_DIT_CloverTrailPlus.so /system/lib/libxditk_DIT_CloverTrailPlus.so
+
 			log -p i -t dnfix "Re-inforcing permissions of modified files..."
 			chmod 0644 /system/lib/hw/a500cg.sensors.redhookbay.so
 			chmod 0644 /system/lib/hw/a600cg.sensors.redhookbay.so
 			chmod 0644 /system/lib/hw/sensors.redhookbay.so
+			chmod 0644 /system/lib/ditlib_a500cg/libxditk_DIT_Manager.so
+			chmod 0644 /system/lib/ditlib_a500cg/libxditk_DIT_CloverTrailPlus.so
+			chmod 0644 /system/lib/ditlib_a600cg/libxditk_DIT_Manager.so
+			chmod 0644 /system/lib/ditlib_a600cg/libxditk_DIT_CloverTrailPlus.so
+			chmod 0644 /system/lib/libxditk_DIT_Manager.so
+			chmod 0644 /system/lib/libxditk_DIT_CloverTrailPlus.so
 			chmod 0644 /system/build.prop
 
 			log -p i -t dnfix "Re-mounting System as Read-Only..."
