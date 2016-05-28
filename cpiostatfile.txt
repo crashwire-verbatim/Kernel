@@ -7,7 +7,6 @@
 "boot/ramdisk/init.avc.rc",32768,1000,1000,644
 "boot/ramdisk/init.a500cg.usb.rc",32768,1000,1000,644
 "boot/ramdisk/init.bt.rc",32768,1000,1000,644
-"boot/ramdisk/init.cm.rc",32768,1000,1000,644
 "boot/ramdisk/init.common.rc",32768,1000,1000,644
 "boot/ramdisk/init.compass.rc",32768,1000,1000,644
 "boot/ramdisk/init.config_init.rc",32768,1000,1000,644
@@ -17,6 +16,7 @@
 "boot/ramdisk/init.environ.rc",32768,1000,1000,644
 "boot/ramdisk/init.firmware.rc",32768,1000,1000,644
 "boot/ramdisk/init.gps.rc",32768,1000,1000,644
+"boot/ramdisk/init.mk.rc",32768,1000,1000,644
 "boot/ramdisk/init.modem.rc",32768,1000,1000,644
 "boot/ramdisk/init.rc",32768,1000,1000,644
 "boot/ramdisk/init.redhookbay.rc",32768,1000,1000,644

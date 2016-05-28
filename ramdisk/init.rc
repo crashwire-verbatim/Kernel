@@ -10,8 +10,8 @@ import /init.redhookbay.rc
 import /init.usb.configfs.rc
 import /init.zygote32.rc
 import /init.trace.rc
-# Include CM's extra init file
-import /init.cm.rc
+# Include MoKee's extra init file
+import /init.mk.rc
 
 
 on early-init

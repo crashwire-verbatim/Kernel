@@ -18,7 +18,7 @@ gsm.net.interface=rmnet0
 #
 # BOOTIMAGE_BUILD_PROPERTIES
 #
-ro.bootimage.build.date=Fri 20 May 05:58:48 GMT 2016
-ro.bootimage.build.date.utc=1463723928
-ro.bootimage.build.fingerprint=ASUS/cm_T00F/T00F:6.0.1/MHC19Q/f4c9a1b0e8:user/test-keys
+ro.bootimage.build.date=Thu May 26 08:46:29 BRT 2016
+ro.bootimage.build.date.utc=1464263189
+ro.bootimage.build.fingerprint=ASUS/mk_T00F/T00F:6.0.1/MOB30J/ab9dd12e15:user/test-keys
 persist.sys.usb.config=none

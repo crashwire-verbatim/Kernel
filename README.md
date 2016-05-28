@@ -1,7 +1,7 @@
-Zenfone 5 Kernel for CyanogenMod 13.1
-=====================================
+Zenfone 5 Kernel for MoKee 60.1
+===============================
 
-This repository contains the ASUS Zenfone 5 for CyanogenMod 13.1
+This repository contains the ASUS Zenfone 5 for MoKee 60.1
 
 ## Contributors ##
 [//]: # (If you have contributed to this project, put your name down here. Follow the ** Alphabetical Order ** !)
